@@ -42,4 +42,28 @@ public class UserRegistrationRestController {
         UserDTO user = userJpaRepository.findById(id).orElse(null);
         return new ResponseEntity<UserDTO>(user, HttpStatus.OK);
     }
+
+    @PutMapping(value = "/{id}", consumes = MediaType.APPLICATION_JSON_VALUE)
+    public ResponseEntity<UserDTO> updateUser(@PathVariable("id") final Long id, @RequestBody UserDTO user){
+
+        // retrieve user data based on id and set it to user object of type UserDTO
+        UserDTO currentUser = userJpaRepository.findById(id).orElse(null);
+
+        // update user object data with user object data
+        currentUser.setName(user.getName());
+        currentUser.setAddress(user.getAddress());
+        currentUser.setEmail(user.getEmail());
+
+        // save user object
+        userJpaRepository.saveAndFlush(currentUser);
+
+        // return ResponseEntity object
+        return new ResponseEntity<UserDTO>(currentUser, HttpStatus.OK);
+    }
+
+    @DeleteMapping("/{id}")
+    public ResponseEntity<UserDTO> deleteUser(@PathVariable("id") final Long id){
+        userJpaRepository.deleteById(id);
+        return new ResponseEntity<UserDTO>(HttpStatus.NO_CONTENT);
+    }
 }
