@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<!-- Angular automatic initialization -->
+<html lang="en" ng-app="myApp">
+<head>
+    <meta charset="UTF-8">
+    <title>Full Stack Development</title>
+    <!-- Custom css -->
+    <link rel="stylesheet" href="../css/style.css">
+    <!-- Bootstrap web-link -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.7/angular.js"></script>
+
+</head>
+<body>
+<div class="page-header text-center">
+    <h2>User Registration System</h2>
+</div>
+<nav class="navbar navbar-dark">
+    <div class="container-fluid">
+        <a href="#/" class="btn btn-primary navbar-btn" role="button">Home</a>
+        <a href="#/register-new-user" class="btn btn-primary navbar-btn" role="button">Register New User</a>
+        <a href="#/list-all-users" class="btn btn-primary" role="button">List All Users</a>
+    </div>
+</nav>
+
+<!-- Entry point tag for dynamic content -->
+<div ng-view></div>
+
+<!-- JavaScript links -->
+<script src="../js/app.js"></script>
+<script src="../js/controller.js"></script>
+<script src="/webjars/angular-route/1.7.7/angular-route.js"></script>
+<script src="/webjars/angular-resource/1.7.7/angular-resource.js"></script>
+</body>
+</html>
