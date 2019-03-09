@@ -33,14 +33,14 @@
             <scope>runtime</scope>
         </dependency>
         <dependency>
-            <groupId>org.webjars.npm</groupId>
+            <groupId>org.webjars.bower</groupId>
             <artifactId>angular-route</artifactId>
-            <version>1.7.7</version>
+            <version>1.4.9</version>
         </dependency>
         <dependency>
             <groupId>org.webjars.bower</groupId>
             <artifactId>angular-resource</artifactId>
-            <version>1.7.7</version>
+            <version>1.4.9</version>
         </dependency>
 
         <dependency>

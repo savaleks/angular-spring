@@ -11,7 +11,7 @@ app.controller('registerUserController', function ($scope, $http, $location, $ro
         }, function (errResponse) {
             $scope.errorMessage = errResponse.data.errorMessage;
         });
-    }
+    };
 
     $scope.resetForm = function () {
         $scope.user = null;
