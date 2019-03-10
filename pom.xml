@@ -39,12 +39,12 @@
         <dependency>
             <groupId>org.webjars.bower</groupId>
             <artifactId>angular-route</artifactId>
-            <version>1.4.9</version>
+            <version>1.5.11</version>
         </dependency>
         <dependency>
             <groupId>org.webjars.bower</groupId>
             <artifactId>angular-resource</artifactId>
-            <version>1.4.9</version>
+            <version>1.5.11</version>
         </dependency>
 
         <dependency>
